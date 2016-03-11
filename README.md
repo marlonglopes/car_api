@@ -3,7 +3,7 @@
 
 As an extension to our current backend infrastructure, we decided to create a car-sharing API to help us to show the best options around an user’s position.
 
-In order to show cars on a map, all we need is a name, description and position of the vehicle. And it is up to the api to organize different data sources and provide a single response via an endpoint.
+In order to show cars on a map, all we need is a description and the position of the vehicle. And it is up to the api to organize different data sources and provide a single response via an endpoint.
 
 ## Instructions
 
