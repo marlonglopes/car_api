@@ -4,8 +4,8 @@ class CreateLocations < ActiveRecord::Migration
 
       t.integer :vehicleCount
       t.decimal :latitude
-      t.string :restrictedP
-      t.text :description
+      t.string  :restrictedP
+      t.text    :description
       t.integer :marketId
       t.integer :locationId
       t.integer :hasVans
