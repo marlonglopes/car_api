@@ -11,6 +11,8 @@ gem 'mysql2'
 
 gem 'rspec-rails'
 
+gem 'geocoder'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
