@@ -5,3 +5,29 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require 'json'
+
+module Seed
+
+  class << self
+    def run
+      data = File.open(file_name, "r").read
+      locations = JSON.load(data)['locations']
+      locations.each do |location|
+        Location.create(location)
+      end
+    end
+
+    def file_name
+      File.expand_path(File.join(File.dirname(__FILE__), '..', 'data', 'data.json'))
+    end
+  end
+
+end
+
+begin
+	Seed.run
+rescue => e
+	puts "Something went wrong ..."
+end
