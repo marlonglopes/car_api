@@ -11,20 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512181326) do
+ActiveRecord::Schema.define(version: 20160512185954) do
 
   create_table "locations", force: :cascade do |t|
     t.integer  "vehicleCount", limit: 4
-    t.decimal  "latitude",                   precision: 10
+    t.decimal  "latitude",                   precision: 10, scale: 6
     t.string   "restrictedP",  limit: 255
     t.text     "description",  limit: 65535
     t.integer  "marketId",     limit: 4
     t.integer  "locationId",   limit: 4
     t.integer  "hasVans",      limit: 4
-    t.decimal  "longitude",                  precision: 10
+    t.decimal  "longitude",                  precision: 10, scale: 6
     t.integer  "zipfleetId",   limit: 4
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
   end
+
+  add_index "locations", ["latitude", "longitude"], name: "by_latitude_longitude", unique: true, using: :btree
 
 end
