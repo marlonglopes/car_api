@@ -45,3 +45,13 @@ This endpoint should fetch the 10 closest cars from the database and return them
 - Use this repository to build your solution.
 - The solution should perform well regardless of the number of records
 - Don't forget the instructions for testing and running the code.
+
+## Instructions to run the code
+- make sure you have mysql installed with root user with 'password' as password for development mode
+- install bundler gem and then run Bundle install
+- run rake db:create:all
+- run rake db:migrate
+- run rake db:seed
+- then rails server , the applicatino wil be runnningon port 3000
+- run  curl http://localhost:3000/cars?location=51.5444204,-0.22707, you must see the proper json data
+- to run test just run rspec
