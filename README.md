@@ -9,7 +9,7 @@ In order to show cars on a map, all we need is a description and the position of
 
 The code challenge has to be implemented in **Ruby**. The web framework and libraries used are up to your choice.
 
-Bear in mind that your solution should be scalable, so optimizations for better performance are a plus. (Cache -> Dali)
+Bear in mind that your solution should be scalable, so optimizations for better performance are a plus.
 
 In this exercise, your job is to build a simple API/webservice that expose one single endpoint called `/cars` that receives a GET with the location parameter as the example below:
 
@@ -45,7 +45,6 @@ This endpoint should fetch the 10 closest cars from the database and return them
 - Use this repository to build your solution.
 - The solution should perform well regardless of the number of records
 - Don't forget the instructions for testing and running the code.
-
 
 ## Instructions to run the code
 - make sure you have mysql installed with root user with 'password' as password for development mode
