@@ -27,7 +27,6 @@ module Seed
 end
 
 begin
-	Seed.run
-rescue => e
-	puts "Something went wrong ..."
+	Seed.run if Location.count < 1
+rescue
 end
